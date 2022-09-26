@@ -5,6 +5,7 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { SplashScreen } from '@awesome-cordova-plugins/splash-screen/ngx';
 import { StatusBar } from '@awesome-cordova-plugins/status-bar/ngx';
+import { FCM } from '@awesome-cordova-plugins/fcm/ngx';
 
 import { IonicModule, IonicRouteStrategy, Platform } from '@ionic/angular';
 
@@ -29,6 +30,7 @@ import { SupportComponent } from './pages/support/support.component';
     Platform,
     StatusBar,
     SplashScreen,
+    FCM,
         { provide: RouteReuseStrategy, 
               useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
