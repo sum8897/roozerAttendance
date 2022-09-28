@@ -16,6 +16,7 @@ export class EmpLoginComponent implements OnInit {
     // this.router.navigateByUrl('/nav/mainpage')
     console.log(contactForm.value);
     console.log("form" + JSON.stringify(contactForm.value));
+    this.router.navigateByUrl('/dashboard');
   }
   openSignUp(){
 this.router.navigateByUrl('/register')
