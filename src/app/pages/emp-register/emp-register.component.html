@@ -1,3 +1,78 @@
-<p>
-  emp-register works!
-</p>
+<ion-content class="login-container">
+  <div class="bg-image">
+    <div style="display: block;justify-content: center;
+    margin: 20px auto 0 auto;">
+      <img style="width: 45px;" src="../../../assets/img/logo.jpeg">
+      <div class="title" style="text-transform: uppercase;font-size: 18px;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #2d6ea8;font-weight: 600;">Roozer Technologies</div>
+    </div>
+    <div class="quotes">Let's get you Started!</div>
+  </div>
+
+  <div class="login-input">
+    <div class="app-name">
+      <h1>Login</h1>
+    </div>
+
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div padding>
+              <ion-list>
+                <ion-item lines="none">
+                  <ion-input name="emp_name" type="text" #emp_name="ngModel" placeholder="Employee Name" ngModel
+                    required></ion-input>
+                </ion-item>
+                <span class="text-danger"
+                  *ngIf="(emp_name.touched || contactForm.submitted) && emp_name.errors?.required">
+                  Employee Name is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-input name="emp_id" type="text" #emp_id="ngModel" placeholder="Employee Id" ngModel required>
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger" *ngIf="(emp_id.touched || contactForm.submitted) && emp_id.errors?.required">
+                  Employee Id is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-input name="mobile" type="tel" #mobile="ngModel" placeholder="Mobile" ngModel required>
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger" *ngIf="(mobile.touched || contactForm.submitted) && mobile.errors?.required">
+                  Mobile is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-input name="email" type="email" #email="ngModel" placeholder="E-Mail" ngModel required>
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger" *ngIf="(email.touched || contactForm.submitted) && email.errors?.required">
+                  E-Mail is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-input name="password" type="password"   #password="ngModel" placeholder="Password" ngModel required>
+                    <!-- <ion-icon  name="eye-off" slot="end"  (click)="toggleTextPassword()" ></ion-icon> -->
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger"
+                  *ngIf="(password.touched || contactForm.submitted) && password.errors?.required">
+                  Password is required *
+                </span>
+              </ion-list>
+
+            </div>
+            <div padding style="margin-top:3vh;">
+              <ion-button class="login_button" size="large" type="submit" expand="block" [disabled]="contactForm.invalid">Register</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+    <div class="create-new-account">
+      <p class="create-account-p" (click)="openLogin()">If You have an account<a>Log-In</a></p>
+    </div>
+  </div>
+
+</ion-content>

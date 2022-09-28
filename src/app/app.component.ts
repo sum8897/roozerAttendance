@@ -15,23 +15,22 @@ export class AppComponent {
     private platform: Platform,
     private statusBar: StatusBar,
     private splashScreen: SplashScreen,
-    private router : Router,
+    private router: Router,
     private fcm: FCM) {
-      this.initializeApp();
-    }
+    this.initializeApp();
+    this.sideMenu();
+  }
 
-    initializeApp() {
-      this.platform.ready().then(() => {
-        this.statusBar.styleDefault();
-        this.splashScreen.hide();
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
 
-              // subscribe to a topic
+
       // this.fcm.subscribeToTopic('Deals');
-      // get FCM token
       this.fcm.getToken().then(token => {
         console.log(token);
       });
-      // ionic push notification example
       this.fcm.onNotification().subscribe(data => {
         console.log(data);
         if (data.wasTapped) {
@@ -39,16 +38,43 @@ export class AppComponent {
         } else {
           console.log('Received in foreground');
         }
-      });      
-      // refresh the FCM token
+      });
       this.fcm.onTokenRefresh().subscribe(token => {
         console.log(token);
       });
-      // unsubscribe from a topic
       // this.fcm.unsubscribeFromTopic('offers');
+    });
+  }
+  navigate:any;
+  sideMenu()
+  {
+    this.navigate =
+    [
 
+      {
+        title : "Dashboard",
+        url   : "/dashboard",
+        icon  : "podium-outline"
+      },
+      {
+        title : "Support",
+        url   : "/dashboard",
+        icon  : "call-outline"
+      },
+      {
+        title : "LogIn",
+        url   : "/login",
+        icon  : "call-outline"
+      },
+      {
+        title : "Register",
+        url   : "/register",
+        icon  : "call-outline"
+      },
 
-      });
-    }
-  
+    ]
+  }
+  logout(){
+    this.router.navigate(['login'])
+  }
 }
