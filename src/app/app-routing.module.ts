@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
@@ -35,6 +35,10 @@ const routes: Routes = [
   {
     path: 'support',
     component: SupportComponent
+  },
+  {
+    path: 'sidenav',
+    loadChildren: () => import('./sidenav/sidenav.module').then( m => m.SidenavPageModule)
   }
 ];
 
