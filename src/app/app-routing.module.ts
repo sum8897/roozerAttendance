@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AttendaceListComponent } from './pages/attendace-list/attendace-list.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmpLoginComponent } from './pages/emp-login/emp-login.component';
 import { EmpRegisterComponent } from './pages/emp-register/emp-register.component';
+import { HolidayListComponent } from './pages/holiday-list/holiday-list.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SupportComponent } from './pages/support/support.component';
 
@@ -35,6 +37,14 @@ const routes: Routes = [
   {
     path: 'support',
     component: SupportComponent
+  },
+  {
+    path: 'attendace_page',
+    component: AttendaceListComponent
+  },
+  {
+    path: 'holiday',
+    component: HolidayListComponent
   },
   {
     path: 'sidenav',
