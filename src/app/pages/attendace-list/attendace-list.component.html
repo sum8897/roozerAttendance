@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      Dashboad
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="text-align: center;">
+    <div style="display: block;justify-content: center;
+    margin: 20px auto 0 auto;">
+      <img style="width: 55px;" src="../../../assets/img/logo.jpeg">
+      <div class="title" style="text-transform: uppercase;font-size: 18px;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #2d6ea8;font-weight: 600;">Roozer Technologies</div>
+    </div>
+    <div class="month-year-div">
+      <div class="month-year-text">
+        Attendance For
+      </div>
+      <div class="select" (click)="selectPrice()">
+        <i class="fa fa-calendar"></i>{{price}}<i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+      </div>
+    </div>
+    <ion-card class="details-card">
+      <ion-row>
+        <ion-col size="4">
+          <div class="details-text">Present</div>
+          <div class="details-count">28</div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="details-text">Absent</div>
+          <div class="details-count">2</div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="details-text">Paid Leave</div>
+          <div class="details-count">0</div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card class="attendance-card" *ngFor="let att of attendance">
+      <ion-row>
+        <ion-col size="4" class="attendance-col">
+          <div class="attendance-text">Emp_Id</div>
+          <div class="attendance-date">{{att.date}}</div>
+        </ion-col>
+        <ion-col size="4" class="attendance-col">
+          <div class="attendance-text">Check-in</div>
+          <div class="attendance-in">{{att.check_in}}</div>
+        </ion-col>
+        <ion-col size="4" class="attendance-col">
+          <div class="attendance-text">Check-out</div>
+          <div class="attendance-out">{{att.check_out}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="toolbar">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home">
+          <!-- <fa-icon icon="home"></fa-icon> -->
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="specilist" (click)='userProfile()'>
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="hospitals()" class="hospitals">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="clinics" (click)="notifications()">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="labs" (click)="menuOpen()">
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

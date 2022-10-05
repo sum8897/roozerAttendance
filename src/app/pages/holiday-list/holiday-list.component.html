@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      Holiday
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="text-align: center;">
+    <div style="display: block;justify-content: center;
+    margin: 20px auto 0 auto;">
+      <img style="width: 55px;" src="../../../assets/img/logo.jpeg">
+      <div class="title" style="text-transform: uppercase;font-size: 18px;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #2d6ea8;font-weight: 600;">Roozer Technologies</div>
+    </div>
+  </div>
+  <div class="contact-text">Contact Us</div>
+  <div class="month-year-div">
+    <div class="month-year-text">
+      Region
+    </div>
+    <div class="select" (click)="selectPrice()">
+      <i class="fa fa-location" style="margin-right: 5px;"></i>{{price}}<i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div>
+  </div>
+  <ion-card>
+    <ion-row class="table-card">
+      <ion-col size="4"><div>Name</div></ion-col>
+      <ion-col size="4">Date</ion-col>
+      <ion-col size="4">Day</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let cal of holiday">
+      <ion-col size="4"><div class="name">{{cal.name}}</div></ion-col>
+      <ion-col size="4"><div class="name">{{cal.date}}</div></ion-col>
+      <ion-col size="4"><div class="name">{{cal.day}}</div></ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

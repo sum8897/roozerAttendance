@@ -1,0 +1,85 @@
+.login-input {
+    height                 : 75vh;
+    border-top-left-radius : 21px;
+    border-top-right-radius: 21px;
+    width                  : 100%;
+    right                  : 0;
+    bottom                 : 0;
+    // margin-top: -5vh;
+    opacity                : 0.9;
+    // background             : #2c69a8;
+}
+
+.app-name {
+    text-align : center;
+    padding-top: 7px;
+
+    h1 {
+        font-size     : 20px;
+        font-weight   : 500;
+        letter-spacing: 1px;
+        color         : #2c69a8;
+    }
+}
+
+ion-list {
+    // background: #2c69a8;
+    color     : #2c69a8;
+
+    ion-item {
+        // --background : #2c69a8;
+        color        : #2c69a8;
+        border-bottom: 1px solid #2c69a8;
+        margin-left  : -15px;
+        //    height: 40px;
+    }
+}
+
+ion-label {
+    color    : #2c69a8;
+    font-size: 15px;
+}
+
+ion-input {
+    font-size: 17px;
+}
+.profile-edit{
+    display: inline-flex;
+    margin-left: 20px;
+    width: 100%;
+    margin-top: 5vh;
+    .profile-icon{
+    font-size: 30px;
+    background: #2d6ea8;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    color: white;
+    ion-icon{
+        margin-top: 11px;
+    }
+    }
+    .profile-text{
+        margin-left: 10px;
+        margin-top: 13px;
+        font-size: 21px;
+    }
+    .profile-edit-icon{
+        margin-left: 10px;
+        margin-top: 11px;
+        font-size: 24px;
+    }
+}
+.ion-invalid.ion-touched.label-stacked.sc-ion-label-md-h:not(.ion-color),
+.ion-invalid.ion-touched .label-stacked.sc-ion-label-md-h:not(.ion-color),
+.ion-invalid.ion-touched.label-floating.sc-ion-label-md-h:not(.ion-color),
+.ion-invalid.ion-touched .label-floating.sc-ion-label-md-h:not(.ion-color) {
+    color    : #2c69a8;
+    font-size: 15px;
+}
+
+.item-has-focused.label-stacked.label-stacked.sc-ion-label-md-h:not(.ion-color) {
+    color    : #2c69a8;
+    font-size: 15px;
+}

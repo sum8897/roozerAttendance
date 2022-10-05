@@ -1,13 +1,115 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    <ion-title>
-      Contant Us
+    <ion-title style="text-align: center;">
+      Contact Us
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <div style="text-align: center;">
+    <div style="display: block;justify-content: center;
+    margin: 20px auto 0 auto;">
+      <img style="width: 55px;" src="../../../assets/img/logo.jpeg">
+      <div class="title" style="text-transform: uppercase;font-size: 18px;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #2d6ea8;font-weight: 600;">Roozer Technologies</div>
+    </div>
+  </div>
+    <div class="contact-text">Contact Us</div>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" style="margin: 10px 30px 0 30px;">
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div padding>
+              <ion-list>
+                <ion-item lines="none">
+                  <ion-label position="stacked">Name</ion-label>
+                  <ion-input name="emp_name" type="text" #emp_name="ngModel" ngModel required></ion-input>
+                </ion-item>
+                <span class="text-danger"
+                  *ngIf="(emp_name.touched || contactForm.submitted) && emp_name.errors?.required">
+                  Name is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-label position="stacked">E-Mail</ion-label>
+                  <ion-input name="email" type="email" #email="ngModel" ngModel required>
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger" *ngIf="(email.touched || contactForm.submitted) && email.errors?.required">
+                  E-Mail is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-label position="stacked">Message</ion-label>
+                  <ion-textarea name="password" type="password" #password="ngModel" ngModel
+                    required>
+                    <!-- <ion-icon  name="eye-off" slot="end"  (click)="toggleTextPassword()" ></ion-icon> -->
+                  </ion-textarea>
+                </ion-item>
+                <span class="text-danger"
+                  *ngIf="(password.touched || contactForm.submitted) && password.errors?.required">
+                  Password is required *
+                </span>
+              </ion-list>
 
+            </div>
+            <div padding style="margin-top:3vh;">
+              <ion-button class="login_button" size="large" type="submit" expand="block"
+                [disabled]="contactForm.invalid">Sent</ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+ <div class="about">
+  <div class="contact-text">About Us</div>
+</div>
+  <div class="about-details" style="margin: 40px 20px 20px 20px;">
+    <div class="phone main">
+      <div><ion-icon name="call-outline"></ion-icon></div><div class="text">+917897196188</div>
+    </div>
+    <div class="web main">
+      <div><ion-icon name="globe-outline"></ion-icon></div>
+     <div class="text">https://www.roozertechnologies.com/</div>
+    </div>
+    <div class="mail main">
+      <div> <ion-icon name="mail-open-outline"></ion-icon></div>
+     <div class="text">info@roozertechnologies.com</div>
+    </div>
+    <div class="address main">
+      <div><ion-icon name="person-outline"></ion-icon></div>
+     <div class="text">Roozer Technologies India Private Limited
+      At -Plot number 220 ,Ramachandrapur bazar
+      gandhi nagar 
+      City -jatni 
+      State -odisha
+      Pin -752050
+      Dist -khurdha</div>
+    </div>
+  </div>
+ 
 </ion-content>
+<ion-footer>
+  <ion-toolbar class="toolbar">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home">
+          <!-- <fa-icon icon="home"></fa-icon> -->
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="specilist" (click)='userProfile()'>
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="hospitals()" class="hospitals">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="clinics" (click)="notifications()">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="labs" (click)="menuOpen()">
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

@@ -1,13 +1,113 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-    <ion-title>
-     Profile
+    <ion-title style="text-align: center;">
+      Profile
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
+  <div style="text-align: center;">
+    <div style="display: block;justify-content: center;
+    margin: 20px auto 0 auto;">
+      <img style="width: 55px;" src="../../../assets/img/logo.jpeg">
+      <div class="title" style="text-transform: uppercase;font-size: 18px;
+    margin-top: 6px;
+    margin-left: 10px;
+    color: #2d6ea8;font-weight: 600;">Roozer Technologies</div>
+    </div>
+  </div>
+    <div class="profile-edit">
+      <div class="profile-icon">
+        <ion-icon name="person-outline"></ion-icon>
+      </div>
+      <div class="profile-text">Profile</div>
+      <div class="profile-edit-icon">
+        <ion-icon name="create-outline"></ion-icon>
+      </div>
+    </div>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" style="margin: 10px 30px 0 30px;">
+      <ion-grid>
+        <ion-row justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div padding>
+              <ion-list>
+                <ion-item lines="none">
+                  <ion-label position="stacked">Employee Name</ion-label>
+                  <ion-input name="emp_name" type="text" #emp_name="ngModel" ngModel required></ion-input>
+                </ion-item>
+                <span class="text-danger"
+                  *ngIf="(emp_name.touched || contactForm.submitted) && emp_name.errors?.required">
+                  Employee Name is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-label position="stacked">Employee Id</ion-label>
+                  <ion-input name="emp_id" type="text" #emp_id="ngModel" ngModel required>
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger" *ngIf="(emp_id.touched || contactForm.submitted) && emp_id.errors?.required">
+                  Employee Id is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-label position="stacked">Phone</ion-label>
+                  <ion-input name="mobile" type="tel" #mobile="ngModel" ngModel required>
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger" *ngIf="(mobile.touched || contactForm.submitted) && mobile.errors?.required">
+                  Mobile is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-label position="stacked">E-Mail</ion-label>
+                  <ion-input name="email" type="email" #email="ngModel" ngModel required>
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger" *ngIf="(email.touched || contactForm.submitted) && email.errors?.required">
+                  E-Mail is required *
+                </span>
+                <ion-item lines="none">
+                  <ion-label position="stacked">Password</ion-label>
+                  <ion-input name="password" type="password" #password="ngModel" ngModel
+                    required>
+                    <!-- <ion-icon  name="eye-off" slot="end"  (click)="toggleTextPassword()" ></ion-icon> -->
+                  </ion-input>
+                </ion-item>
+                <span class="text-danger"
+                  *ngIf="(password.touched || contactForm.submitted) && password.errors?.required">
+                  Password is required *
+                </span>
+              </ion-list>
 
+            </div>
+            <!-- <div padding style="margin-top:3vh;">
+              <ion-button class="login_button" size="large" type="submit" expand="block"
+                [disabled]="contactForm.invalid">Register</ion-button>
+            </div> -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+ 
 </ion-content>
+<ion-footer>
+  <ion-toolbar class="toolbar">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home">
+          <!-- <fa-icon icon="home"></fa-icon> -->
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="specilist" (click)='userProfile()'>
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="hospitals()" class="hospitals">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="clinics" (click)="notifications()">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="labs" (click)="menuOpen()">
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
