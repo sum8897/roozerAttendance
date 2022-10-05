@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-attendace-list',
@@ -8,7 +10,9 @@ import { AlertController } from '@ionic/angular';
 })
 export class AttendaceListComponent implements OnInit {
   price
-  constructor( private alertController: AlertController,) {
+  constructor( private alertController: AlertController,
+             private user: UserService,
+             private router: Router) {
     this.price="Oct 2022";
    }
 
@@ -83,7 +87,7 @@ export class AttendaceListComponent implements OnInit {
 
     await alert.present();
   }
-  attendance=[
+  attendanceData=[
     {
       id: 1,
       date: '01/08/22',
@@ -145,4 +149,16 @@ export class AttendaceListComponent implements OnInit {
       check_out: '07:00 pm'
     },
   ]
+  dashboard() {
+    this.router.navigateByUrl('/dashboard');
+  }
+  userProfile() {
+    this.router.navigateByUrl('/profile');
+  }
+  attendance() {
+    this.router.navigateByUrl('/attendace_page');
+  }
+  notifications() {
+    this.router.navigateByUrl('/notification');
+  }
 }

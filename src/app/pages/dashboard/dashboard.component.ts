@@ -21,42 +21,16 @@ punchOut:boolean=false;
 
   ngOnInit() {}
 
-  async menuOpen(){
-    const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Roozer Technologies',
-      // subHeader: 'Example subheader',
-      cssClass: 'my-custom-class',
-      buttons: [
-        {
-          text: 'Profile',
-          icon: 'person-outline',
-          // role: 'destructive',
-          handler: () => {
-            console.log('Profile Edit clicked');
-            this.router.navigateByUrl('/profile');
-          }  
-        },
-        {
-          text: 'Contact Us',
-          icon: 'call-outline',
-          data: {
-            action: 'share',
-          },
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          data: {
-            action: 'cancel',
-          },
-        },
-      ],
-    });
-
-    actionSheet.present();
-
+ 
+  userProfile(){
+this.router.navigateByUrl('/profile');
   }
-
+  attendance(){
+    this.router.navigateByUrl('/attendace_page');
+  }
+notifications(){
+  this.router.navigateByUrl('/notification');
+}
 // data=[
 //   {
 //     id:1,

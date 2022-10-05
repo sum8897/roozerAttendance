@@ -31,3 +31,10 @@
     padding-left: 10px;
     font-size: 12px
 }
+ion-tab-bar {
+    --background           : #2d6ea8;
+    --color                : white;
+    border-top-right-radius: 21px;
+    border-top-left-radius : 21px;
+    margin-bottom          : 0;
+}

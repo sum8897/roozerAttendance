@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-holiday-list',
@@ -9,7 +11,9 @@ import { AlertController } from '@ionic/angular';
 export class HolidayListComponent implements OnInit {
 
   price
-  constructor( private alertController: AlertController,) {
+  constructor( private alertController: AlertController,
+              private router: Router,
+              private user: UserService) {
     this.price="South Region";
    }
 
@@ -58,7 +62,7 @@ export class HolidayListComponent implements OnInit {
 
     await alert.present();
   }
-  attendance=[
+  attendanceData=[
     {
       id: 1,
       date: '01/08/22',
@@ -177,4 +181,16 @@ day: 'Sunday'
             day: 'Saturday'
           },
   ]
+  userProfile(){
+    this.router.navigateByUrl('/profile');
+      }
+      attendance(){
+        this.router.navigateByUrl('/attendace_page');
+      }
+    notifications(){
+      this.router.navigateByUrl('/notification');
+    }
+    dashboard(){
+      this.router.navigateByUrl('/dashboard');
+    }
 }

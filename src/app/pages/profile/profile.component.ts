@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private user:UserService,
+             private router: Router) { }
 
   ngOnInit() {}
   onSubmit(contactForm:any) {
@@ -15,4 +18,14 @@ export class ProfileComponent implements OnInit {
     console.log("form" + JSON.stringify(contactForm.value));
 
   }
+  dashboard(){
+    this.router.navigateByUrl('/dashboard');
+  }
+ 
+      attendance(){
+        this.router.navigateByUrl('/attendace_page');
+      }
+    notifications(){
+      this.router.navigateByUrl('/notification');
+    }
 }
