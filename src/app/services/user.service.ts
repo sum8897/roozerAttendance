@@ -54,4 +54,41 @@ export class UserService {
     actionSheet.present();
 
   }
+
+  async menuAdminOpen(){
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: 'Roozer Technologies',
+      // subHeader: 'Example subheader',
+      cssClass: 'my-custom-class',
+      buttons: [
+        {
+          text: 'Profile',
+          icon: 'person-outline',
+          // role: 'destructive',
+          handler: () => {
+            console.log('Profile Edit clicked');
+            this.router.navigateByUrl('/admin-profile');
+          }  
+        },
+        {
+          text: 'Holi Day List',
+          icon: 'calendar-clear-outline',
+          handler: () => {
+            console.log('Holiday clicked');
+            this.router.navigateByUrl('/holiday');
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          data: {
+            action: 'cancel',
+          },
+        },
+      ],
+    });
+
+    actionSheet.present();
+
+  }
 }
