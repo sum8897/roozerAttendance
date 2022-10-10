@@ -1,0 +1,39 @@
+.attendance-card {
+    color     : #2d6ea8;
+    background: #dadada;
+    padding   : 10px 0;
+    box-shadow: none;
+    border-radius: 10px;
+    .attendance-col {
+        font-size  : 18px;
+        font-weight: 600;
+    }
+    ion-list{
+        background: #dadada;
+        ion-item{
+            --background: #dadada;
+            color     : #2d6ea8;
+            margin: -15px auto;
+            ion-label{
+                color     : #2d6ea8;
+                opacity: 999;
+                h3{
+                    font-size: 18px;
+                    opacity: 999;
+                    font-weight: 600;
+                }
+                p{
+                    color     : #2d6ea8;  
+                    opacity: 999;
+                    font-weight: 600;
+                }
+            }
+            ion-thumbnail{
+                width: 80px;
+                height: 80px;
+                margin-left: -5px;
+            }
+        }
+    }
+    
+}

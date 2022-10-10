@@ -1,0 +1,21 @@
+ion-button{
+    --background: #2d6ea8;
+    --color: white;
+    --opacity: 11;
+    --border-radius: 21px;
+    text-transform: capitalize;
+}
+.icons{
+    margin-right: 10px;
+}
+.attendance-card {
+    color     : #2d6ea8;
+    background: #dadada;
+    padding   : 10px 0;
+    box-shadow: none;
+    border-radius: 10px;
+    .attendance-col {
+        font-size  : 18px;
+        font-weight: 600;
+    }
+}

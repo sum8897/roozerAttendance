@@ -4,16 +4,25 @@ import { AlertController } from '@ionic/angular';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-attendace-list',
-  templateUrl: './attendace-list.component.html',
-  styleUrls: ['./attendace-list.component.scss'],
+  selector: 'app-date-wise',
+  templateUrl: './date-wise.component.html',
+  styleUrls: ['./date-wise.component.scss'],
 })
-export class AttendaceListComponent implements OnInit {
-  price
+export class DateWiseComponent implements OnInit {
+
+  price:any;
+  today:any;
   constructor( private alertController: AlertController,
              private user: UserService,
              private router: Router) {
-    this.price="Oct 2022";
+              var today = new Date();
+              var dd = String(today.getDate()).padStart(2, '0');
+              var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+              var yyyy = today.getFullYear();
+              
+              this.today = mm + '/' + dd + '/' + yyyy;
+              console.log(this.today)
+    this.price=this.today;
    }
 
   ngOnInit() {}
@@ -23,54 +32,49 @@ export class AttendaceListComponent implements OnInit {
  
       inputs: [
         {
-          label: 'Jan 2022',
+          label: '01/10/2022',
           type: 'radio',
-          value: 'Jan 2022',
+          value: '01/10/2022',
         },
         {
-          label: 'Feb 2022',
+          label: '02/10/2022',
           type: 'radio',
-          value: 'Feb 2022',
+          value: '02/10/2022',
         },
         {
-          label: 'Mar 2022',
+          label: '03/10/2022',
           type: 'radio',
-          value: 'Mar 2022',
+          value: '03/10/2022',
         },
         {
-          label: 'Apr 2022',
+          label: '04/10/2022',
           type: 'radio',
-          value: 'Apr 2022',
+          value: '04/10/2022',
         },
         {
-          label: 'May 2022',
+          label: '05/10/2022',
           type: 'radio',
-          value: 'May 2022',
+          value: '05/10/2022',
         },
         {
-          label: 'Jun 2022',
+          label: '06/10/2022',
           type: 'radio',
-          value: 'Jun 2022',
+          value: '06/10/2022',
         },
         {
-          label: 'Jul 2022',
+          label: '07/10/2022',
           type: 'radio',
-          value: 'Jul 2022',
+          value: '08/10/2022',
         },
         {
-          label: 'Aug 2022',
+          label: '09/10/2022',
           type: 'radio',
-          value: 'Aug 2022',
+          value: '09/10/2022',
         },
         {
-          label: 'Sep 2022',
+          label: '10/10/2022',
           type: 'radio',
-          value: 'Sep 2022',
-        },
-        {
-          label: 'Oct 2022',
-          type: 'radio',
-          value: 'Oct 2022',
+          value: '10/10/2022',
         },
       ],
       buttons: [
@@ -149,16 +153,16 @@ export class AttendaceListComponent implements OnInit {
       check_out: '07:00 pm'
     },
   ]
-  dashboard() {
-    this.router.navigateByUrl('/dashboard');
+  adminDashboard(){
+    this.router.navigateByUrl('/admin-dashboard');
   }
-  userProfile() {
-    this.router.navigateByUrl('/profile');
+  adminProfile(){
+    this.router.navigateByUrl('/admin-profile');
   }
-  attendance() {
-    this.router.navigateByUrl('/attendace_page');
+  empList(){
+    this.router.navigateByUrl('/admin-emp-list');
   }
-  notifications() {
-    this.router.navigateByUrl('/notification');
+  adminNotifications(){
+    this.router.navigateByUrl('/admin-notification');
   }
 }

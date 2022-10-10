@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-title style="text-align: center;">
+      Dashboad
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="display: block;justify-content: center;
+  margin: 20px auto 0 auto;text-align: center;width: 100%;">
+      <img style="width: 55px;" src="../../../assets/img/logo.jpeg">
+      <div class="title" style="text-transform: uppercase;font-size: 18px;
+  margin-top: 6px;
+  margin-left: 10px;
+  color: #2d6ea8;font-weight: 600;">Roozer Technologies</div>
+    </div>
+    <ion-card class="attendance-card" *ngFor="let emp of emp_list">
+      <ion-list lines="none">
+        <ion-item detail="true">
+          <ion-thumbnail slot="start" style="--border-radius: 50%;">
+            <img src="../../../assets/img/user1.jpeg">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>{{emp.name}}</h3>
+            <p>{{emp.emp_id}}</p>
+            <p>{{emp.deprt}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="toolbar">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button class="home" (click)="adminDashboard()">
+          <!-- <fa-icon icon="home" style="width: 20px;height: 20px;"></fa-icon> -->
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="profile" (click)='adminProfile()'>
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="empList()" class="emplist">
+          <ion-icon name="calendar-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="notifications" (click)="notifications()">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button class="adminMenu" (click)="user.menuAdminOpen()">
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

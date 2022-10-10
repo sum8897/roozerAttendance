@@ -21,7 +21,15 @@
         <ion-row justify-content-center>
           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
             <div padding>
-              <ion-list>
+              <ion-list> 
+                
+                <ion-item lines="none" (click)="selectPrice()">
+                  <ion-label>Select User Type</ion-label>
+                <ion-lable>{{price}}</ion-lable>
+                <ion-icon name="chevron-down-outline" style="color: white;"></ion-icon>
+                  <!-- <ion-input name="user_y" type="text" #emp_name="ngModel" placeholder="Employee Name" ngModel
+                    required></ion-input> -->
+                </ion-item>
                 <ion-item lines="none">
                   <ion-input name="emp_name" type="text" #emp_name="ngModel" placeholder="Employee Name" ngModel
                     required></ion-input>

@@ -1,0 +1,55 @@
+.month-year-div {
+    display        : flex;
+    justify-content: space-around;
+    color          : #2d6ea8;
+    margin-top     : 35px;
+
+    .month-year-text {
+        font-size: 21px;
+        width    : 50%;
+    }
+
+    .select {
+        border       : 1px solid #2d6ea8;
+        border-radius: 7px;
+        padding      : 5px 10px;
+
+        .fa-calendar {
+            padding-right: 9px;
+        }
+
+        .fa-chevron-down {
+            padding-left: 5px;
+        }
+
+    }
+}
+
+.details-card {
+    background   : #2d6ea8;
+    color        : #fff;
+    border-radius: 10px;
+    opacity      : 1;
+
+    .details-text {
+        font-size: 20px;
+    }
+
+    .details-count {
+        font-size      : 20px;
+        line-height    : 1.5;
+        text-decoration: underline;
+    }
+}
+
+.attendance-card {
+    color     : #2d6ea8;
+    background: #dadada;
+    padding   : 10px 0;
+    box-shadow: none;
+    border-radius: 10px;
+    .attendance-col {
+        font-size  : 18px;
+        font-weight: 600;
+    }
+}

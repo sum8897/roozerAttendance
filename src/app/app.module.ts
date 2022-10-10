@@ -26,6 +26,12 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { SupportComponent } from './pages/support/support.component';
 import { AttendaceListComponent } from './pages/attendace-list/attendace-list.component';
 import { HolidayListComponent } from './pages/holiday-list/holiday-list.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminEmpListComponent } from './admin/admin-emp-list/admin-emp-list.component';
+import { AdminSingleEmpComponent } from './admin/admin-single-emp/admin-single-emp.component';
+import { DateWiseComponent } from './admin/date-wise/date-wise.component';
+import { AdminNotificationComponent } from './admin/admin-notification/admin-notification.component';
+import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,13 @@ import { HolidayListComponent } from './pages/holiday-list/holiday-list.componen
     ProfileComponent,
     SupportComponent,
     AttendaceListComponent,
-    HolidayListComponent
+    HolidayListComponent,
+    AdminDashboardComponent,
+    AdminEmpListComponent,
+    AdminSingleEmpComponent,
+    DateWiseComponent,
+    AdminNotificationComponent,
+    AdminProfileComponent
   ],
   imports: [ 
             BrowserModule, 

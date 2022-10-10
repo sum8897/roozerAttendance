@@ -4,18 +4,16 @@ import { AlertController } from '@ionic/angular';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
-  selector: 'app-attendace-list',
-  templateUrl: './attendace-list.component.html',
-  styleUrls: ['./attendace-list.component.scss'],
+  selector: 'app-admin-single-emp',
+  templateUrl: './admin-single-emp.component.html',
+  styleUrls: ['./admin-single-emp.component.scss'],
 })
-export class AttendaceListComponent implements OnInit {
-  price
-  constructor( private alertController: AlertController,
-             private user: UserService,
-             private router: Router) {
-    this.price="Oct 2022";
-   }
+export class AdminSingleEmpComponent implements OnInit {
 
+  constructor(private alertController: AlertController,
+             private router: Router,
+            private user: UserService) { }
+  price:any;
   ngOnInit() {}
   async selectPrice(){
     const alert = await this.alertController.create({
@@ -149,16 +147,16 @@ export class AttendaceListComponent implements OnInit {
       check_out: '07:00 pm'
     },
   ]
-  dashboard() {
-    this.router.navigateByUrl('/dashboard');
+  adminDashboard(){
+    this.router.navigateByUrl('/admin-dashboard');
   }
-  userProfile() {
-    this.router.navigateByUrl('/profile');
+  adminProfile(){
+    this.router.navigateByUrl('/admin-profile');
   }
-  attendance() {
-    this.router.navigateByUrl('/attendace_page');
+  empList(){
+    this.router.navigateByUrl('/admin-emp-list');
   }
-  notifications() {
-    this.router.navigateByUrl('/notification');
+  adminNotifications(){
+    this.router.navigateByUrl('/admin-notification');
   }
 }
