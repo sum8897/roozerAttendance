@@ -32,6 +32,7 @@ import { AdminSingleEmpComponent } from './admin/admin-single-emp/admin-single-e
 import { DateWiseComponent } from './admin/date-wise/date-wise.component';
 import { AdminNotificationComponent } from './admin/admin-notification/admin-notification.component';
 import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
+import { AdminHolidaylistComponent } from './admin/admin-holidaylist/admin-holidaylist.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AdminProfileComponent } from './admin/admin-profile/admin-profile.compo
     AdminSingleEmpComponent,
     DateWiseComponent,
     AdminNotificationComponent,
-    AdminProfileComponent
+    AdminProfileComponent,
+    AdminHolidaylistComponent
   ],
   imports: [ 
             BrowserModule, 

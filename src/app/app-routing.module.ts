@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminEmpListComponent } from './admin/admin-emp-list/admin-emp-list.component';
+import { AdminHolidaylistComponent } from './admin/admin-holidaylist/admin-holidaylist.component';
 import { AdminNotificationComponent } from './admin/admin-notification/admin-notification.component';
 import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 import { AdminSingleEmpComponent } from './admin/admin-single-emp/admin-single-emp.component';
@@ -75,6 +76,10 @@ const routes: Routes = [
   {
     path: 'admin-notification',
     component: AdminNotificationComponent,
+  },
+  {
+    path: 'admin-holiday',
+    component: AdminHolidaylistComponent,
   },
   {
     path: 'sidenav',

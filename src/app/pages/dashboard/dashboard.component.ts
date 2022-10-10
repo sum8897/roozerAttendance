@@ -17,7 +17,10 @@ punchOut:boolean=false;
               private auth :AuthService,
               private user: UserService,
               private router: Router
-              ) { }
+              ) { 
+                const date = new Date();
+console.log(date);
+              }
 
   ngOnInit() {}
 

@@ -1,0 +1,64 @@
+.contact-text{
+    margin-left: 40px;
+    margin-bottom: -24px;
+    margin-top: 20px;
+    font-size: 21px;
+}
+.month-year-div {
+    display: flex;
+    color: #2d6ea8;
+    margin-top: 35px;
+    margin-left: 20px;
+
+    .month-year-text {
+        font-size: 21px;
+    }
+
+    .select {
+        border: 1px solid #2d6ea8;
+        border-radius: 7px;
+        padding: 5px 10px;
+        margin-left: 10px;
+        font-size: 10px;
+
+        .fa-calendar {
+            padding-right: 9px;
+        }
+
+        .fa-chevron-down {
+            padding-left: 5px;
+        }
+
+    }
+}
+.table-card{
+    background: #dadada;
+    text-align: center;
+    color: #000;
+    opacity: 111;
+    height: 45px;
+    padding-top: 6px;
+    font-size: 20px;
+}
+
+
+ion-card{
+    border-radius: 10px;
+    border: 1px solid #b7b7b7;
+    ion-row:nth-child(even) {
+        background: #FFF;
+        text-align: center;
+        color: #000;
+        opacity: 111;
+        height: 45px;
+        padding-top: 10px;
+    }
+    ion-row:nth-child(odd) {
+        background: #dadada;
+    text-align: center;
+    color: #000;
+    opacity: 111;
+    height: 45px;
+    padding-top: 10px;
+    }
+}
