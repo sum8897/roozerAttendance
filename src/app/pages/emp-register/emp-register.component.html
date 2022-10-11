@@ -13,7 +13,7 @@
 
   <div class="login-input">
     <div class="app-name">
-      <h1>Login</h1>
+      <h1>Register</h1>
     </div>
 
     <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
@@ -23,9 +23,9 @@
             <div padding>
               <ion-list> 
                 
-                <ion-item lines="none" (click)="selectPrice()">
+                <ion-item lines="none" (click)="user.selectUserType()">
                   <ion-label>Select User Type</ion-label>
-                <ion-lable>{{price}}</ion-lable>
+                <ion-label style="text-align: right;padding-right: 10px;">{{user.user_type}}</ion-label>
                 <ion-icon name="chevron-down-outline" style="color: white;"></ion-icon>
                   <!-- <ion-input name="user_y" type="text" #emp_name="ngModel" placeholder="Employee Name" ngModel
                     required></ion-input> -->

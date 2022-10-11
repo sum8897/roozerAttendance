@@ -23,6 +23,11 @@
               <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
                 <div padding>
                   <ion-list>
+                    <ion-item lines="none" (click)="user.selectUserType()">
+                      <ion-label>Select User Type</ion-label>
+                    <ion-label style="text-align: right;padding-right: 10px;">{{user.user_type}}</ion-label>
+                    <ion-icon name="chevron-down-outline" style="color: white;"></ion-icon>
+                    </ion-item>
                     <ion-item lines="none">
                       <ion-input name="email" type="email" #email="ngModel" placeholder="E-Mail" ngModel required></ion-input>
                     </ion-item>

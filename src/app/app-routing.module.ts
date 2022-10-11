@@ -7,9 +7,16 @@ import { AdminNotificationComponent } from './admin/admin-notification/admin-not
 import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 import { AdminSingleEmpComponent } from './admin/admin-single-emp/admin-single-emp.component';
 import { DateWiseComponent } from './admin/date-wise/date-wise.component';
+import { AboutCompanyComponent } from './customer/about-company/about-company.component';
+import { CustomerDashboardComponent } from './customer/customer-dashboard/customer-dashboard.component';
+import { CustomerNotificationComponent } from './customer/customer-notification/customer-notification.component';
+import { CustomerProfileComponent } from './customer/customer-profile/customer-profile.component';
+import { CustomerQueryComponent } from './customer/customer-query/customer-query.component';
+import { CustomerReviewComponent } from './customer/customer-review/customer-review.component';
 import { AttendaceListComponent } from './pages/attendace-list/attendace-list.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmpLoginComponent } from './pages/emp-login/emp-login.component';
+import { EmpNotificationComponent } from './pages/emp-notification/emp-notification.component';
 import { EmpRegisterComponent } from './pages/emp-register/emp-register.component';
 import { HolidayListComponent } from './pages/holiday-list/holiday-list.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -36,6 +43,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'notification',
+    component: EmpNotificationComponent
   },
   {
     path: 'profile',
@@ -80,6 +91,30 @@ const routes: Routes = [
   {
     path: 'admin-holiday',
     component: AdminHolidaylistComponent,
+  },
+  {
+    path: 'customer-dashboard',
+    component: CustomerDashboardComponent,
+  },
+  {
+    path: 'customer-query',
+    component: CustomerQueryComponent,
+  },
+  {
+    path: 'customer-review',
+    component: CustomerReviewComponent,
+  },
+  {
+    path: 'aboutus',
+    component: AboutCompanyComponent,
+  },
+  {
+    path: 'customer-notification',
+    component: CustomerNotificationComponent,
+  },
+  {
+    path: 'customer-profile',
+    component: CustomerProfileComponent,
   },
   {
     path: 'sidenav',

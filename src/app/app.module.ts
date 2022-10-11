@@ -33,6 +33,12 @@ import { DateWiseComponent } from './admin/date-wise/date-wise.component';
 import { AdminNotificationComponent } from './admin/admin-notification/admin-notification.component';
 import { AdminProfileComponent } from './admin/admin-profile/admin-profile.component';
 import { AdminHolidaylistComponent } from './admin/admin-holidaylist/admin-holidaylist.component';
+import { CustomerDashboardComponent } from './customer/customer-dashboard/customer-dashboard.component';
+import { CustomerQueryComponent } from './customer/customer-query/customer-query.component';
+import { CustomerReviewComponent } from './customer/customer-review/customer-review.component';
+import { CustomerProfileComponent } from './customer/customer-profile/customer-profile.component';
+import { CustomerNotificationComponent } from './customer/customer-notification/customer-notification.component';
+import { EmpNotificationComponent } from './pages/emp-notification/emp-notification.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +48,7 @@ import { AdminHolidaylistComponent } from './admin/admin-holidaylist/admin-holid
     EmpRegisterComponent,
     ProfileComponent,
     SupportComponent,
+    EmpNotificationComponent,
     AttendaceListComponent,
     HolidayListComponent,
     AdminDashboardComponent,
@@ -50,7 +57,12 @@ import { AdminHolidaylistComponent } from './admin/admin-holidaylist/admin-holid
     DateWiseComponent,
     AdminNotificationComponent,
     AdminProfileComponent,
-    AdminHolidaylistComponent
+    AdminHolidaylistComponent,
+    CustomerDashboardComponent,
+    CustomerQueryComponent,
+    CustomerReviewComponent,
+    CustomerProfileComponent,
+    CustomerNotificationComponent
   ],
   imports: [ 
             BrowserModule, 
