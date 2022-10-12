@@ -12,7 +12,7 @@ export class UserService {
               private alertController: AlertController,) { }
               async selectUserType(){
                 const alert = await this.alertController.create({
-                  header: 'Select Price',
+                  header: 'Select User Type',
              
                   inputs: [
                     {
@@ -54,7 +54,7 @@ export class UserService {
   async menuOpen(){
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Roozer Technologies',
-      // subHeader: 'Example subheader',
+      // subHeader: 'for Employee',
       cssClass: 'my-custom-class',
       buttons: [
         {
@@ -123,7 +123,7 @@ export class UserService {
           icon: 'calendar-clear-outline',
           handler: () => {
             console.log('Holiday clicked');
-            this.router.navigateByUrl('/holiday');
+            this.router.navigateByUrl('/admin-holiday');
           }
         },
         {
