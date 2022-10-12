@@ -68,14 +68,14 @@ export class UserService {
         },
         {
           text: 'Contact Us',
-          icon: 'call-outline',
+          icon: 'mail-outline',
           handler: () => {
             console.log('Profile Edit clicked');
             this.router.navigateByUrl('/support');
           }
         },
         {
-          text: 'Holi Day List',
+          text: 'Holiday',
           icon: 'calendar-clear-outline',
           handler: () => {
             console.log('Holiday clicked');
@@ -83,8 +83,8 @@ export class UserService {
           }
         },
         {
-          text: 'LogOut',
-          icon: 'calendar-clear-outline',
+          text: 'Sign out',
+          icon: 'log-out-outline',
           handler: () => {
             this.logout();
           }
@@ -119,7 +119,7 @@ export class UserService {
           }  
         },
         {
-          text: 'Holi Day List',
+          text: 'Holiday',
           icon: 'calendar-clear-outline',
           handler: () => {
             console.log('Holiday clicked');
@@ -127,8 +127,8 @@ export class UserService {
           }
         },
         {
-          text: 'LogOut',
-          icon: 'calendar-clear-outline',
+          text: 'Sign out',
+          icon: 'log-out-outline',
           handler: () => {
             this.logout();
           }
@@ -163,7 +163,7 @@ export class UserService {
         },
         {
           text: 'Testimonials',
-          icon: 'person-outline',
+          icon: 'people-outline',
           // role: 'destructive',
           handler: () => {
             console.log('Profile Edit clicked');
@@ -180,8 +180,8 @@ export class UserService {
           }  
         },
         {
-          text: 'LogOut',
-          icon: 'calendar-clear-outline',
+          text: 'Sign out',
+          icon: 'log-out-outline',
           handler: () => {
             this.logout();
           }

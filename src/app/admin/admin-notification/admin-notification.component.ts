@@ -13,5 +13,16 @@ export class AdminNotificationComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {}
-
+  adminDashboard(){
+    this.router.navigateByUrl('/admin-dashboard');
+  }
+  adminProfile(){
+    this.router.navigateByUrl('/admin-profile');
+  }
+  empList(){
+    this.router.navigateByUrl('/admin-emp-list');
+  }
+  adminNotifications(){
+    this.router.navigateByUrl('/admin-notification');
+  }
 }

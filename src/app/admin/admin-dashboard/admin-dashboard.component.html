@@ -9,7 +9,7 @@
 <ion-content>
   <ion-card class="attendance-card" *ngFor="let att of attendanceData">
     <ion-row>
-      <ion-col size="4" class="attendance-col">
+      <ion-col size="4" class="attendance-col" style="padding-left: 10px;">
         <div class="attendance-text">Emp_Id</div>
         <div class="attendance-date">{{att.date}}</div>
       </ion-col>
@@ -23,8 +23,8 @@
       </ion-col>
     </ion-row>
     <div style="justify-content: center;display: inline-flex;width: 100%;">
-      <ion-button >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Late&nbsp;&nbsp;&nbsp;&nbsp;</ion-button>
-      <ion-button >Approved</ion-button>
+      <ion-button style="--background: #f47c7c;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Late&nbsp;&nbsp;&nbsp;&nbsp;</ion-button>
+      <ion-button style="--background: green;">Approved</ion-button>
     </div>
   </ion-card>
 </ion-content>
@@ -40,7 +40,7 @@
           <ion-icon name="person-outline"></ion-icon>
         </ion-tab-button>
         <ion-tab-button (click)="empList()" class="emplist">
-          <ion-icon name="calendar-outline"></ion-icon>
+          <ion-icon name="people-outline"></ion-icon>
         </ion-tab-button>
         <ion-tab-button class="notifications" (click)="notifications()">
           <ion-icon name="notifications-outline"></ion-icon>
