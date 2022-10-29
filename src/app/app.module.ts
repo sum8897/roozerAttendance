@@ -62,7 +62,8 @@ import { EmpNotificationComponent } from './pages/emp-notification/emp-notificat
     CustomerQueryComponent,
     CustomerReviewComponent,
     CustomerProfileComponent,
-    CustomerNotificationComponent
+    CustomerNotificationComponent,
+    CustomerProfileComponent
   ],
   imports: [ 
             BrowserModule, 

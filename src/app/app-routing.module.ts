@@ -117,6 +117,10 @@ const routes: Routes = [
     component: CustomerProfileComponent,
   },
   {
+    path: 'customer-project',
+    component: CustomerProfileComponent,
+  },
+  {
     path: 'sidenav',
     loadChildren: () => import('./sidenav/sidenav.module').then( m => m.SidenavPageModule)
   }
